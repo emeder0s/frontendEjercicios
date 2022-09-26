@@ -1,0 +1,37 @@
+body {
+    font-family: 'Advent Pro';font-size: 16px;
+}
+
+ul{
+    list-style: none;
+}   
+ul li {
+    margin-bottom: 10px;
+}
+
+div {
+    margin-left: 10px;
+}
+
+h1 {
+    color:green;
+}
+
+h1:hover {
+    color:brown;
+}
+
+h2 {
+    color:brown;
+}
+
+h2:hover {
+    color:green;
+}
+
+button {
+    font-family: 'Advent Pro';
+    font-size: 14px;
+    color:white;
+    background-color: brown;
+}
