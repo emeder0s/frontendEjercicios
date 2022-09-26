@@ -21,7 +21,7 @@ var resultadoDesp = incrementarDesp++;
 var incrementarAnt = 2;
 var resultadoAnt= incrementarAnt++;
 
-//bucles-10
+//bucles-10 AqUI TNGO DUDAS!!
 let contarHasta10_2
 for(let i=0; i<=10;i++){
 
@@ -48,7 +48,34 @@ const MINOMBRE = "Elena";
 const MINUMFAV = 4;
 
 //+ booleanos
-
 var booleanoOr = booleano1 == booleano2;
 var booleanoMix1 = (booleano1 && (TAU/2 == PI)) || (variableValorNumerico >= MINUMFAV);
-var seisNoEsNueve 
+var seisNoEsNueve = 6 === 9;
+var booleanoMix2 = variableValorNumerico > 0 ||  variableValorNumerico < -(MINUMFAV * TAU);
+
+//+ operadores
+var valorSuma = MINUMFAV + variableValorNumerico;
+var valorResta = MINUMFAV - variableValorNumerico;
+var valorMultiplicacion = MINUMFAV * variableValorNumerico;
+var valorDivision = MINUMFAV/3;
+
+//bucles-24
+var contarHasta10 = 0;
+do{
+    contarHasta10++;
+}while(!contarHasta10 === 10);
+
+//bucles-25
+var preI = 0;
+var preJ = 0; 
+for(let i=0; i<11;i++){
+    preI = preI + ++preJ
+}
+
+//bucles-26
+var sumaImpares = 0;
+for(let i=0; i<10;i++){
+    if(i%2!=0){
+        sumaImpares = sumaImpares + i;
+    }
+}
