@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<head> 
+    <meta charset="UTF-8" /> 
+    <title>Eventos</title> 
+    <style type="text/css"> 
+        div { 
+            width: 300px; 
+            height: 300px; 
+            background: aquamarine; 
+        } 
+    </style> 
+    <script language="JavaScript"> 
+        function fuera() { 
+            alert ("Has salido en la Caja!");
+        } 
+        function encima() { 
+            alert (" Las características de la caja son: \n" + 
+            " 300px de ancho y 300px de alto \n" + 
+            " Color: Aguamarina"); 
+        } 
+    </script> 
+</head> 
+<body onload="alert('La página se ha cargado completamente');"> 
+    <div onmouseout="fuera();" onmouseover="encima();"></div> 
+</body> 
+</html>
