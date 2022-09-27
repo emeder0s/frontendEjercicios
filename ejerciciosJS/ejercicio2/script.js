@@ -21,10 +21,9 @@ var resultadoDesp = incrementarDesp++;
 var incrementarAnt = 2;
 var resultadoAnt= incrementarAnt++;
 
-//bucles-10 AqUI TNGO DUDAS!!
-let contarHasta10_2
-for(let i=0; i<=10;i++){
-
+//bucles-10
+for(let contarHasta10_2=0; contarHasta10_2<=10;contarHasta10_2++){
+    console.log("La variable incrementó un valor");
 }
 
 //bucles-11
