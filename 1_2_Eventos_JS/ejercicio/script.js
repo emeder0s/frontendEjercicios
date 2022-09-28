@@ -1,8 +1,7 @@
-
 // función que sirve para ocultar y mostrar
-function muestraOculta(num) {
-    var parrafo = document.getElementById("contenidos_" + num);
-    var enlace = document.getElementById("enlace_" + num);
+function muestraOculta(enlace) {
+    parrafoId = "contenidos_" + enlace.id.substr(-1);
+    var parrafo = document.getElementById(parrafoId);
     if (parrafo.style.visibility == "" || parrafo.style.visibility == "visible") {
         parrafo.style.visibility = "hidden";
         enlace.innerText = "Mostrar contenido";
@@ -13,9 +12,17 @@ function muestraOculta(num) {
     }
 }
 
+// window.onload = () => {
+//     var numEnlaces = document.getElementsByTagName("a").length;
+//     for(let i=1; i <=numEnlaces; i++) {
+//         document.getElementById("enlace_" + i).setAttribute("onclick", "muestraOculta("+ i +")");
+//     }
+// }
+
+//Mismo ejercicio pero con el THIS
 window.onload = () => {
     var numEnlaces = document.getElementsByTagName("a").length;
     for(let i=1; i <=numEnlaces; i++) {
-        document.getElementById("enlace_" + i).setAttribute("onclick", "muestraOculta("+ i +")");
+        document.getElementById("enlace_" + i).setAttribute("onclick", "muestraOculta(this)");
     }
 }
