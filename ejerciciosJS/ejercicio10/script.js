@@ -57,10 +57,16 @@ function simplicar(num,den){
 //alert(simplicar(8,4));
 // alert(simplicar(4,2));
 
-function leer_fraccion(){
-    var num = window.prompt("Introduce el numerador: ");
-    var den = window.prompt("Introduce el denominador: ");
-    return simplicar(num,den);
+function leer_fraccion(num){
+    if (num==1){
+        fraccion = "primera";
+    }else{
+        fraccion = "segunda"
+    }
+    var num = parseInt(window.prompt("Introduce el numerador de la "+fraccion+" fracción: "));
+    var den = parseInt(window.prompt("Introduce el denominador de la "+fraccion+" fracción: "));
+    // return simplicar(num,den);
+    return [num,den];
 }
 
 function escribir_fraccion(num,den){
@@ -71,8 +77,65 @@ function escribir_fraccion(num,den){
     } 
 }
 
+function sumar_facciones(num1,num2,den1,den2){
+    // console.log();
+    var num = num1+num2;
+    var den = den1+den2;
 
-var fraccion = leer_fraccion();
-var num = fraccion[0];
-var den = fraccion[1];
-escribir_fraccion(num,den);
+    return [num,den];
+}
+
+function restar_facciones(num1,num2,den1,den2){
+    var num = (num1*den2)-(num2*den1);
+    var den = den1*den2;
+
+    return [num,den];
+}
+
+function multiplicar_facciones(num1,num2,den1,den2){
+    var num = num1*num2;
+    var den = den1*den2;
+
+    return [num,den];
+} 
+
+function dividir_facciones(num1,num2,den1,den2){
+    var num = num1*den2;
+    var den = den1*num2;
+
+    return [num,den];
+} 
+
+function main(operacion){
+    if (operacion != 5){
+        var num, den,fraccion;
+        var fraccion1 = leer_fraccion(1);
+        var num1 = fraccion1[0];
+        var den1 = fraccion1[1];
+        
+        var fraccion2 = leer_fraccion(2);
+        var num2 = fraccion2[0];
+        var den2 = fraccion2[1];
+        console.log(num1);
+        console.log(den1);
+        console.log(num2);
+        console.log(den1);
+        switch(operacion){
+            case 1:
+                fraccion = sumar_facciones(num1,num2,den1,den2);
+                break;
+            case 2:
+                fraccion = restar_facciones(num1,num2,den1,den2);
+                break;
+            case 3:
+                fraccion = multiplicar_facciones(num1,num2,den1,den2);
+                break;
+            case 4:
+                fraccion = dividir_facciones(num1,num2,den1,den2);
+                break;
+        }
+        
+         fraccionSimplificada = simplicar(fraccion[0],fraccion[1]);
+         escribir_fraccion(fraccionSimplificada[0],fraccionSimplificada[1]);
+    }
+}
