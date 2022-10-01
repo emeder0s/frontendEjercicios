@@ -5,105 +5,185 @@
     <title>Ejercicio del Cambio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
-<body>
-    <h1 id="title">Inicializar caja</h1>
-    <div class="row" style="padding: 0px 30px;">
-        
-        <div class="col-6 col-sm-6" style="padding: 0px 20px;">
-            <div id="precio-cambio-container" class="row" >
-                <div class="col-6 col-sm-6">
-                    <div class="form-group row">
-                        <label for="precio" class="col-sm-4 col-form-label">Precio</label>
-                        <input id="precio" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce el precio del producto"></input>
+<body style="margin: 0px; padding: 0px;font-size: smaller; color:white;">
+    <div class="container-fluid" style="padding: 0px 30px;">
+        <div class="row">
+            <div id="inicializar" class="col-6" style="background-color: rgb(255, 0, 136);">
+                <h2 id="title-ini">Inicializar caja</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group row">
+                            <label for="billetes500" class="col-sm-12 col-form-label">Billetes de 500</label>
+                            <input id="billetes500" class="form-control-input-ini form-control form-control-sm input-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="billetes200" class="col-sm-12 col-form-label">Billetes de 200</label>
+                            <input id="billetes200" class="form-control-input-ini form-control  form-control-sm input-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="billetes100" class="col-sm-12 col-form-label">Billetes de 100</label>
+                            <input id="billetes100" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="billetes50" class="col-sm-12 col-form-label">Billetes de 50</label>
+                            <input id="billetes50"class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="billetes20" class="col-sm-12 col-form-label">Billetes de 20</label>
+                            <input id="billetes20" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="billetes10" class="col-sm-12 col-form-label">Billetes de 10</label>
+                            <input id="billetes10" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="billetes5"class="col-sm-12 col-form-label">Billetes de 5</label>
+                            <input id="billetes5" class="form-control-input-ini form-control form-control-sm"> </input> 
+                        </div>
+                        <button class="btn btn-outline-light" onclick="main()">Iniciar</button>
                     </div>
-                </div>
-                <div class="col-6 col-sm-6">
-                    <div class="form-group row">
-                        <label for="cambio" class="col-sm-4 col-form-label">Tu cambio:</label>
-                        <input id="cambio" class="form-control-input form-control form-control-input form-control-sm" readonly></input>
+                    <div class="col-6">
+                        <div class="form-group row">
+                            <label for="monedas2" class="col-sm-12 col-form-label">Monedas de 2</label>
+                            <input id="monedas2" class="form-control-input-ini form-control form-control-sm"></input>   
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="monedas1" for="billetes500" class="col-sm-12 col-form-label">Monedas de 1</label>
+                            <input id="monedas1" class="form-control-input-ini form-control form-control-sm"></input>     
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="monedas05" for="billetes500" class="col-sm-12 col-form-label">Monedas de 0.50</label>
+                            <input id="monedas05" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas02" class="col-sm-12 col-form-label">Monedas de 0.20</label>
+                            <input id="monedas02" class="form-control-input-ini form-control form-control-sm"></input> 
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas01" class="col-sm-12 col-form-label">Monedas de 0.10</label>
+                            <input id="monedas01" class="form-control-input-ini form-control  form-control-sm"></input> 
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas005" class="col-sm-12 col-form-label">Monedas 0.05</label>
+                            <input id="monedas005" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="monedas002" class="col-sm-12 col-form-label">Monedas 0.02</label>
+                            <input id="monedas002" class="form-control-input-ini form-control form-control-sm"></input>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="monedas001" class="col-sm-12 col-form-label">Monedas 0.01</label>
+                            <input id="monedas001" class="form-control-input-ini form-control form-control-sm"></input>    
+                        </div>
                     </div>
+                </div>  
+            </div>
+            <div id="pagar" class="col-6" style="background-color: rgb(255, 157, 0);">
+                <h2 id="title-ini">Pagar</h2>
+                <div class="form-group row">
+                    <label for="cambio" class="col-sm-12 col-form-label">Tu cambio:</label>
+                    <input id="cambio" class="form-control  form-control-sm" readonly></input>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label for="billetes500" class="col-sm-4 col-form-label">Billetes de 500</label>
-                <input id="billetes500" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 500"></input>
-            </div>
-    
-            <div class="form-group row">
-                <label for="billetes200" class="col-sm-4 col-form-label">Billetes de 200</label>
-                <input id="billetes200" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 200"></input>
-            </div>
-        
-            <div class="form-group row">
-                <label for="billetes100" class="col-sm-4 col-form-label">Billetes de 100</label>
-                <input id="billetes100" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 100"></input>
-            </div>
-    
-            <div class="form-group row">
-                <label for="billetes50" class="col-sm-4 col-form-label">Billetes de 50</label>
-                <input id="billetes50"class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 50"></input>
-            </div>
-        
-            <div class="form-group row">
-                <label for="billetes20" class="col-sm-4 col-form-label">Billetes de 20</label>
-                <input id="billetes20" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 20"></input>
-            </div>
-    
-            <div class="form-group row">
-                <label for="billetes10" class="col-sm-4 col-form-label">Billetes de 10</label>
-                <input id="billetes10" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 10"></input>
-            </div>
-        
-            <div class="form-group row">
-                <label for="billetes5"class="col-sm-4 col-form-label">Billetes de 5</label>
-                <input id="billetes5" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de billetes de 5"> </input> 
-            </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group row">
+                            <label for="precio" class="col-sm-12 col-form-label"><strong>Precio</strong></label>
+                            <input id="precio" class="form-control form-control-sm"></input>
+                        </div>
 
-            <button onclick="main()">Guardar</button>
-        </div>
-        <div class="col-6 col-sm-6" style="padding: 20px;">
-            <div class="form-group row">
-                <label for="monedas2" class="col-sm-4 col-form-label">Monedas de 2</label>
-                <input id="monedas2" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 2"></input>   
-            </div>
-    
-            <div class="form-group row">
-                <label for="monedas1" for="billetes500" class="col-sm-4 col-form-label">Monedas de 1</label>
-                <input id="monedas1" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 1"></input>     
-            </div>
-    
-            <div class="form-group row">
-                <label for="monedas05" for="billetes500" class="col-sm-4 col-form-label">Monedas de 0.50</label>
-                <input id="monedas05" class="form-control-input form-control form-control-input form-control-sm"  placeholder="Introduce la cantidad de moendas de 0.50"></input>
-            </div>
-        
-            <div class="form-group row">
-                <label for="monedas02" class="col-sm-4 col-form-label">Monedas de 0.20</label>
-                <input id="monedas02" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 0.20"></input> 
-            </div>
-        
-            <div class="form-group row">
-                <label for="monedas01" class="col-sm-4 col-form-label">Monedas de 0.10</label>
-                <input id="monedas01" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 0.10"></input> 
-            </div>
-        
-            <div class="form-group row">
-                <label for="monedas005" class="col-sm-4 col-form-label">Monedas 0.05</label>
-                <input id="monedas005" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 0.05"></input>
-            </div>
-            
-            <div class="form-group row">
-                <label for="monedas002" class="col-sm-4 col-form-label">Monedas 0.02</label>
-                <input id="monedas002" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 0.02"></input>
-            </div>
-            
-            <div class="form-group row">
-                <label for="monedas001" class="col-sm-4 col-form-label">Monedas 0.01</label>
-                <input id="monedas001" class="form-control-input form-control form-control-input form-control-sm" placeholder="Introduce la cantidad de moendas de 0.01"></input>    
+                        <div class="form-group row">
+                            <label for="pagoBilletes500" class="col-sm-12 col-form-label">Billetes de 500</label>
+                            <input id="pagoBilletes500" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="pagoBilletes200" class="col-sm-12 col-form-label">Billetes de 200</label>
+                            <input id="pagoBilletes200" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="pagoBilletes100" class="col-sm-12 col-form-label">Billetes de 100</label>
+                            <input id="pagoBilletes100" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="pagoBilletes50" class="col-sm-12 col-form-label">Billetes de 50</label>
+                            <input id="pagoBilletes50"class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="pagoBilletes20" class="col-sm-12 col-form-label">Billetes de 20</label>
+                            <input id="pagoBilletes20" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="pagoBilletes10" class="col-sm-12 col-form-label">Billetes de 10</label>
+                            <input id="pagoBilletes10" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="pagoBilletes5"class="col-sm-12 col-form-label">Billetes de 5</label>
+                            <input id="pagoBilletes5" class="form-control-input-pago form-control form-control-input form-control-sm"> </input> 
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group row">
+                            <label for="monedas2" class="col-sm-12 col-form-label">Monedas de 2</label>
+                            <input id="monedas2" class="form-control-input-pago form-control form-control-input form-control-sm"></input>   
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="monedas1" for="pagoBilletes500" class="col-sm-12 col-form-label">Monedas de 1</label>
+                            <input id="monedas1" class="form-control-input-pago form-control form-control-input form-control-sm"></input>     
+                        </div>
+                
+                        <div class="form-group row">
+                            <label for="monedas05" for="pagoBilletes500" class="col-sm-12 col-form-label">Monedas de 0.50</label>
+                            <input id="monedas05" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas02" class="col-sm-12 col-form-label">Monedas de 0.20</label>
+                            <input id="monedas02" class="form-control-input-pago form-control form-control-input form-control-sm"></input> 
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas01" class="col-sm-12 col-form-label">Monedas de 0.10</label>
+                            <input id="monedas01" class="form-control-input-pago form-control form-control-input form-control-sm"></input> 
+                        </div>
+                    
+                        <div class="form-group row">
+                            <label for="monedas005" class="col-sm-12 col-form-label">Monedas 0.05</label>
+                            <input id="monedas005" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="monedas002" class="col-sm-12 col-form-label">Monedas 0.02</label>
+                            <input id="monedas002" class="form-control-input-pago form-control form-control-input form-control-sm"></input>
+                        </div>
+                        
+                        <div class="form-group row">
+                            <label for="monedas001" class="col-sm-12 col-form-label">Monedas 0.01</label>
+                            <input id="monedas001" class="form-control-input-pago form-control form-control-input form-control-sm"></input>    
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
