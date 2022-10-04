@@ -1,0 +1,2 @@
+En el JSON del último ejemplo indica el código de acceso al email de The Bridge de Isabel:
+- array[2].emails[0]; --> CORREGIDO: array[1].Emails[2];
