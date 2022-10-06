@@ -1,14 +1,13 @@
-//1. Solicita una cadena al usuario e indica la cantidad de veces 
-//  que aparece la a en las palabras impares
+//1. Crea un array de dos dimensiones (matriz) que contenga números y cadenas 
+//   solicitados al usuario, muestra por pantalla los elementos cadena que se 
+//   encuentren en posiciones fila par y columna impar
 
-function ejercicio1(){
-    var cadena = new String("HOLA CARACOLA, ¿CUANTAS A HAY EN LAS PALABRAS IMPARES?");
-    console.log(cadena);
-    var cadenaArray = cadena.split(" ");
-    console.log(cadenaArray);
-}
 
-ejercicio1();
+//2. Crea un array a partir de las siguientes instrucciones:
+// El tamaño es solicitado al usuario
+// Elemento1: 1
+// Elemento2: 1
+// ElementoN: ElementoN-1 + ElementoN-2
 
-//2. Solicita una cadena al usuario y devuélvela invertida 
-//Ej: "Hola, ¿qué tal estás?" -> estás? tal ¿qué Hola,
+
+//3. Solicita al usuario un array de máximo 10 números reales y calcula su media.
