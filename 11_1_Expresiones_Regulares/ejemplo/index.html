@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Expresiones regulares</title>
+</head>
+<body>
+   <script>
+        // const cedula    = 'V-11122233';
+        // const regExp    = new RegExp(/[VE]-[0-9]{1,8}/); 
+        // const resultado = regExp.test(cedula);
+        
+        // console.log (resultado);
+
+        const cedula    = 'V-11122233';
+        const regExp    = new RegExp(/^([VE]-)?\d{1,8}$/i);
+        const resultado = regExp.test(cedula);
+   
+        console.log(resultado);
+   </script> 
+</body>
+</html>

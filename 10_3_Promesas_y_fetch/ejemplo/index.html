@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var promise = new Promise(function(resolve) {
+    
+        //     function sayHello() {
+        //         resolve('Hello World!');
+        //     }
+
+        //     setTimeout(sayHello, 10000);
+
+        // })
+
+        // console.log(promise);
+
+        // promise.then(function(message) {
+        //     console.log(message) 
+        // })
+
+        fetch('https://api.github.com/users/daviniathebridge')
+            .then(res=>res.json())
+            .then(json=>{console.log(json.email);console.log(json)});
+    </script>
+</body>
+</html>

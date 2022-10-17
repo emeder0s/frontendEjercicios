@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Promesas</title>
+</head>
+<body>
+    <label for="userName">Nombre de Usuario</label>
+    <input id="userName"></input>
+    <button onclick="buscar()">Buscar</button>
+    <div id="results"></div>
+    <script>
+        function buscar(){
+            var userName = document.getElementById("userName").value;
+            var url = "https://api.github.com/users/"+ userName;
+            
+            fetch(url)
+            .then(res=>res.json())
+            .then(json=>{
+                document.getElementById("results").innerHTML="";
+                var columnNombre = document.createElement("p"); 
+                var contentNombre = document.createTextNode ("Nombre: "+json.login);
+                columnNombre.appendChild (contentNombre);
+                
+                var image = document.createElement("img");
+                image.src = json.avatar_url;
+               
+                var columnRepos = document.createElement("p"); 
+                var contentRepos = document.createTextNode ("Num. Repos: "+json.public_repos);
+                columnRepos.appendChild (contentRepos);
+
+                document.getElementById("results").appendChild(image);
+                document.getElementById("results").appendChild(columnNombre);
+                document.getElementById("results").appendChild(contentRepos);
+                
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+#container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.button-raza {
+    background-color: rgb(89, 147, 255);
+    color:white;
+    width: 107px;
+    margin: 5px;
+    padding: 5px 3px;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 5px 5px 1px grey;
+    cursor:pointer;
+}
+
+#imageRandom{
+    width: 250px;
+    height: 250px;
+    border: none;
+    box-shadow: 1px 2px 17px #afaeae;
+    border-radius: 10px;
+}
+
+#buttons{
+    width: 100%;
+}
