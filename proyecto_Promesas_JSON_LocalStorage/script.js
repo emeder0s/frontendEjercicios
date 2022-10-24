@@ -1,6 +1,6 @@
 localStorage.razas = [];
 localStorage.identificadores = ["uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez","once","doce","trece","catorce","quince","dieciseis","diecisiete","dieciocho","diecinueve","veinte"];
-
+localStorage.estadisticas = [];
 
 function getDivId(){
     var id = "";
@@ -13,8 +13,6 @@ function getDivId(){
 }
 
 function putDog(id,urlImg){
-    console.log(urlImg);
-    console.log(id);
     document.getElementById(id).style.backgroundImage=`url(${urlImg})`;
     document.getElementById(id).style.backgroundSize="contain";
     document.getElementById(id).style.backgroundRepeat="no-repeat";
@@ -30,7 +28,13 @@ function searchDog(){
         if(localStorage.razas){
             var razas = JSON.parse(localStorage.razas);
         }else{
-            var razas = [];
+            var razas = new Array();
+        }
+        
+        if(localStorage.estadisticas){
+            var estadisticas = JSON.parse(localStorage.estadisticas);
+        }else{
+            var estadisticas = new Array();
         }
 
         var raza = json.message.split("/")[4];
@@ -44,8 +48,18 @@ function searchDog(){
         }else{
             console.log("Esta raza ya está en la colección!");
         }
-
+        console.log(raza);
+        console.log(estadisticas.raza);
+        console.log(estadisticas.raza == undefined);
+        if (estadisticas.raza == "undefined"){
+            console.log(raza);
+            estadisticas[raza] = 1;
+            console.log(estadisticas[raza]);
+        }else{
+            estadisticas.raza += 1;
+        }
+    
         localStorage.razas = JSON.stringify(razas);
-
+        localStorage.estadisticas = JSON.stringify(estadisticas);    
     });
 }
